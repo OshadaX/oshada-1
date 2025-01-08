@@ -1,0 +1,27 @@
+:root {
+  /* Light theme */
+  --background-color: #fff;
+  --btn-color: #0987f2;
+  --btn-text-color: #fff;
+  --project-card-bg-color: #ffffff;
+  --text-color: #222;
+  --form-text-color: #555;
+  --footer-text-color: #888;
+}
+
+[data-theme='dark'] {
+  /* Dark theme */
+  --background-color: #222;
+  --btn-color: #0987f2;
+  --btn-text-color: #fff;
+  --project-card-bg-color: #fff;
+  --text-color: #fff;
+  --form-text-color: #ddd;
+  --footer-text-color: #bbb;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
