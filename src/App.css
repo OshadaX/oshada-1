@@ -1,27 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
 :root {
   /* Light theme */
-  --background-color: #fff;
+  --background-color: #ffffff;
   --btn-color: #0987f2;
-  --btn-text-color: #fff;
-  --project-card-bg-color: #ffffff;
-  --text-color: #222;
-  --form-text-color: #555;
-  --footer-text-color: #888;
+  --btn-text-color: #ffffff;
+  --project-card-bg-color: rgba(255, 255, 255, 0.05);
+  --text-color: #222222;
+  --form-text-color: #555555;
+  --footer-text-color: #888888;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --gradient-start: #0987f2;
+  --gradient-end: #06bcfb;
 }
 
 [data-theme='dark'] {
   /* Dark theme */
-  --background-color: #222;
+  --background-color: #151515;
   --btn-color: #0987f2;
-  --btn-text-color: #fff;
-  --project-card-bg-color: #fff;
-  --text-color: #fff;
-  --form-text-color: #ddd;
-  --footer-text-color: #bbb;
+  --btn-text-color: #ffffff;
+  --project-card-bg-color: rgba(255, 255, 255, 0.03);
+  --text-color: #ffffff;
+  --form-text-color: #dddddd;
+  --footer-text-color: #bbbbbb;
+  --card-border: rgba(255, 255, 255, 0.05);
+  --card-shadow: rgba(0, 0, 0, 0.2);
+  --gradient-start: #0987f2;
+  --gradient-end: #06bcfb;
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 60px;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+h1,h2,h3,p{
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h2,h3,p{
+  font-family: 'Roboto Mono', monospace;
+}
+
+h2,h3{
+  font-size: 20px;
+}
+
+h1{
+  font-family: 'Rubik', sans-serif;
+  font-size: 32px;
+  background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+}
+
+p{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.sectionTitle{
+  margin-bottom: 30px;
+}
+
+.hover{
+  cursor: pointer;
 }

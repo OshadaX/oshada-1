@@ -16,21 +16,7 @@
   }
   
   /* Light and Dark theme styling */
-  .light {
-    --background-color: #fff;
-    --text-color: #222;
-    --btn-color: #0987f2;
-    --btn-text-color: #fff;
-    --form-text-color: #555;
-  }
-  
-  .dark {
-    --background-color: #121212;
-    --text-color: #fff;
-    --btn-color: #0987f2;
-    --btn-text-color: #fff;
-    --form-text-color: #bbb;
-  }
+
   
   /* Image and theme toggle container */
   .colorModeContainer {
