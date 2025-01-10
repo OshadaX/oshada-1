@@ -1,30 +1,40 @@
-import React from 'react'
-import styles from './Skills.module.css'
+import styles from './Skills.module.css';
+import checkMarkIconDark from '../../assets/checkmark-dark.svg';
+import checkMarkIconLight from '../../assets/checkmark-light.svg';
+import SkillList from '../../common/SkillList';
+import { useTheme } from '../../common/ThemeContext';
 
 function Skills() {
+  const { theme } = useTheme();
+  const checkMarkIcon = theme === 'light' ? checkMarkIconLight : checkMarkIconDark;
+
   return (
-    <section id='skills' className={styles.skills}>
-      <h1>Skills</h1>
-      <div className={styles.skillsList}>
-        <div className={styles.skill}>
-          <h3>Frontend Development</h3>
-          <p>HTML, CSS, JavaScript, React, Next.js</p>
-        </div>
-        <div className={styles.skill}>
-          <h3>Backend Development</h3>
-          <p>Node.js, Express, MongoDB</p>
-        </div>
-        <div className={styles.skill}>
-          <h3>Data Analytics</h3>
-          <p>Python, Pandas, SQL, Power BI</p>
-        </div>
-        <div className={styles.skill}>
-          <h3>Project Management</h3>
-          <p>Agile, Scrum, Jira, Trello</p>
-        </div>
+    <section id="skills" className={styles.container}>
+      <h1 className="sectionTitle">Skills</h1>
+      <div className={styles.skillList}>
+        <SkillList src={checkMarkIcon} skill="HTML" />
+        <SkillList src={checkMarkIcon} skill="CSS" />
+        <SkillList src={checkMarkIcon} skill="JavaScript" />
+        <SkillList src={checkMarkIcon} skill="TypeScript" />
+        <SkillList src={checkMarkIcon} skill="Node" />
+      </div>
+      <hr />
+      <div className={styles.skillList}>
+        <SkillList src={checkMarkIcon} skill="React" />
+        <SkillList src={checkMarkIcon} skill="Angular" />
+        <SkillList src={checkMarkIcon} skill="Vue" />
+        <SkillList src={checkMarkIcon} skill="Tailwind CSS" />
+      </div>
+      <hr />
+      <div className={styles.skillList}>
+        <SkillList src={checkMarkIcon} skill="Redux" />
+        <SkillList src={checkMarkIcon} skill="Webpack" />
+        <SkillList src={checkMarkIcon} skill="Git" />
+        <SkillList src={checkMarkIcon} skill="Jest" />
+        <SkillList src={checkMarkIcon} skill="Bootstrap" />
       </div>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;

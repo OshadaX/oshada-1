@@ -7,7 +7,7 @@ import githubLight from '../../assets/github-light.svg';
 import linkdinLight from '../../assets/linkedin-light.svg';
 import githubDark from '../../assets/github-dark.svg';
 import linkdinDark from '../../assets/linkedin-dark.svg';
-import CV from '../../assets/cv.pdf';
+import CV from '../../assets/Oshada Perera.pdf';
 import { useTheme } from '../../common/themeContext';
 
 export default function Hero() {
@@ -38,10 +38,10 @@ export default function Hero() {
                 </h1>
                 <h2>Frontend Developer</h2>
                 <span className='socialIcons'>
-                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/OshadaX" target="_blank" rel="noopener noreferrer">
                         <img src={githubIcon} alt="github icon" />
                     </a>
-                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="www.linkedin.com" target="_blank" rel="noopener noreferrer">
                         <img src={linkdinIcon} alt="linkedin icon" />
                     </a>
                 </span>

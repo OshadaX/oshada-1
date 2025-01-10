@@ -1,0 +1,117 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: var(--background-color);
+    min-height: 100vh;
+}
+
+.sectionTitle {
+    margin: 0 0 2.5rem 0;
+    font-size: 2.8rem;
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+textarea,
+input:not([type='submit']) {
+    height: 50px;
+    padding-left: 16px;
+    width: 100%;
+}
+
+textarea {
+    padding-top: 16px;
+    resize: none;
+    height: 150px;
+}
+
+input,
+textarea {
+    border-radius: 20px;
+    border: #888 1px solid;
+    box-sizing: border-box;
+    justify-self: center;
+    background-color: var(--background-color);
+    color: var(--form-text-color);
+}
+
+::placeholder {
+    color: var(--form-text-color);
+}
+
+input[type='submit'] {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type='submit']:hover {
+    background: var(--gradient-end);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+input[type='submit']:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 4rem 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    form {
+        gap: 1.5rem;
+    }
+
+    input,
+    textarea {
+        padding: 0.8rem;
+    }
+
+    input[type='submit'] {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (width >= 800px) {
+    textarea,
+    input:not([type='submit']) {
+      width: 600px;
+      font-size: 20px;
+    }
+    form {
+      gap: 40px;
+    }
+}
+
+@media (width >= 1400px) {
+    textarea,
+    input:not([type='submit']) {
+      width: 800px;
+    }
+}
