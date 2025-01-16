@@ -6,8 +6,28 @@ import screenshot2 from '../../assets/screenshot2.png';
 import screenshot3 from '../../assets/screenshot3.png';
 import screenshot4 from '../../assets/screenshot4.png';
 import screenshot5 from '../../assets/screenshot5.png';
+import screenshot6 from '../../assets/screenshot6.png';
 
 function FitLift() {
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  const screenshots = [
+    screenshot1,
+    screenshot2,
+    screenshot3,
+    screenshot4,
+    screenshot5,
+    screenshot6
+  ];
+
+  const handlePrevClick = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? screenshots.length - 1 : prevSlide - 1));
+  };
+
+  const handleNextClick = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === screenshots.length - 1 ? 0 : prevSlide + 1));
+  };
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>FitLift</h1>
@@ -20,22 +40,31 @@ function FitLift() {
         className={styles.mockup}
       />
       <h2 className={styles.subheading}>Screenshots</h2>
-      <div className={styles.gallery}>
-        <img src={screenshot1} alt="Screenshot 1" className={styles.screenshot} />
-        <img src={screenshot2} alt="Screenshot 2" className={styles.screenshot} />
-        <img src={screenshot3} alt="Screenshot 3" className={styles.screenshot} />
-        <img src={screenshot4} alt="Screenshot 4" className={styles.screenshot} />
-        <img src={screenshot5} alt="Screenshot 5" className={styles.screenshot} />
+      <div className={styles.sliderContainer}>
+        <button className={styles.prevBtn} onClick={handlePrevClick}>
+          &#10094;
+        </button>
+        <div className={styles.slider}>
+          <img
+            src={screenshots[currentSlide]}
+            alt={`Screenshot ${currentSlide + 1}`}
+            className={styles.screenshot}
+          />
+        </div>
+        <button className={styles.nextBtn} onClick={handleNextClick}>
+          &#10095;
+        </button>
       </div>
-      <p className={styles.details}>
-        The design process included:
+
+      <div className={styles.details}>
+        <p>The design process included:</p>
         <ul>
           <li>Conducting user research to understand the needs of fitness enthusiasts.</li>
           <li>Creating wireframes and interactive prototypes in Figma.</li>
           <li>Ensuring accessibility and usability throughout the app interface.</li>
           <li>Focusing on a clean and modern aesthetic to engage users.</li>
         </ul>
-      </p>
+      </div>
       <a 
         href="https://figma.com/your-project-link" 
         target="_blank" 
