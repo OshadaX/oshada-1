@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
-import styles from './FitLift.module.css';
-import { FiArrowLeft, FiArrowRight, FiFigma, FiGithub } from 'react-icons/fi';
-import sc1 from '../../assets/screenshot1.png';
-import sc2 from '../../assets/screenshot2.png';
-import sc3 from '../../assets/screenshot3.png';
-import sc4 from '../../assets/screenshot4.png';
+import styles from './zeroStyle.module.css'; // Create a new CSS file for this project
+import { FiArrowLeft, FiArrowRight, FiFigma } from 'react-icons/fi';
 
-const FitLiftProject = () => {
+const ZeroStyle = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const screenshots = [
-    sc1,
-    sc2,
-    sc3,
-    sc4,
+    'shoe-cart.jpg',
+    'shoe-listing.jpg',
+    'shoe-detail.jpg',
     // Add more screenshot paths
   ];
 
@@ -27,8 +22,8 @@ const FitLiftProject = () => {
   return (
     <section className={styles.projectContainer}>
       <div className={styles.projectHeader}>
-        <h1 className={styles.projectTitle}>FitLift</h1>
-        <p className={styles.projectSubtitle}>Fitness Tracking Mobile App</p>
+        <h1 className={styles.projectTitle}>Shoe Shopping Website</h1>
+        <p className={styles.projectSubtitle}>UI/UX Design for an E-commerce Shoe Store</p>
         <div className={styles.projectMeta}>
           <span className={styles.projectRole}>UI/UX Designer</span>
           <span className={styles.projectDate}>2023</span>
@@ -40,13 +35,13 @@ const FitLiftProject = () => {
         <button className={styles.sliderArrow} onClick={handlePrevSlide}>
           <FiArrowLeft />
         </button>
-        
+
         <div className={styles.sliderTrack} style={{ transform: `translateX(-${activeSlide * 100}%)` }}>
           {screenshots.map((src, index) => (
             <div key={index} className={styles.slide}>
-              <img 
-                src={src} 
-                alt={`FitLift Screen ${index + 1}`} 
+              <img
+                src={src}
+                alt={`Shoe Shopping Screen ${index + 1}`}
                 className={styles.slideImage}
               />
             </div>
@@ -73,9 +68,21 @@ const FitLiftProject = () => {
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>Project Overview</h2>
           <p className={styles.sectionText}>
-            Designed a modern fitness tracking app focusing on workout logging, progress visualization,
-            and social features. Conducted user research and created high-fidelity prototypes.
+            Designed a modern and user-friendly e-commerce website for a shoe store. The project
+            includes key pages like the product listing, product details, and shopping cart,
+            focusing on seamless navigation and intuitive user interactions.
           </p>
+        </div>
+
+        {/* Key Features */}
+        <div className={styles.section}>
+          <h2 className={styles.sectionTitle}>Key Features</h2>
+          <ul className={styles.featuresList}>
+            <li>Product Listing Page with filters and sorting options</li>
+            <li>Product Detail Page with high-quality images and size selection</li>
+            <li>Shopping Cart Page with item summary and checkout options</li>
+            <li>Responsive design for mobile and desktop</li>
+          </ul>
         </div>
 
         {/* Design Process */}
@@ -84,23 +91,23 @@ const FitLiftProject = () => {
           <div className={styles.processSteps}>
             <div className={styles.processStep}>
               <span className={styles.stepNumber}>1</span>
-              <h3>Research & Discovery</h3>
-              <p>User interviews, competitive analysis, persona creation</p>
+              <h3>Research</h3>
+              <p>Analyzed competitor websites and user behavior in e-commerce.</p>
             </div>
             <div className={styles.processStep}>
               <span className={styles.stepNumber}>2</span>
               <h3>Wireframing</h3>
-              <p>Low-fidelity flows, user journey mapping</p>
+              <p>Created low-fidelity wireframes for all key pages.</p>
             </div>
             <div className={styles.processStep}>
               <span className={styles.stepNumber}>3</span>
-              <h3>Visual Design</h3>
-              <p>UI components, design system, high-fidelity mockups</p>
+              <h3>High-Fidelity Design</h3>
+              <p>Designed pixel-perfect mockups in Figma.</p>
             </div>
           </div>
         </div>
 
-        {/* Tools & Technologies */}
+        {/* Tools Used */}
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>Tools Used</h2>
           <div className={styles.toolsGrid}>
@@ -108,18 +115,10 @@ const FitLiftProject = () => {
               <FiFigma className={styles.toolIcon} />
               <span>Figma</span>
             </div>
-            <div className={styles.toolCard}>
-              <img src="adobe-xd.svg" alt="Adobe XD" className={styles.toolIcon} />
-              <span>Adobe XD</span>
-            </div>
-            <div className={styles.toolCard}>
-              <img src="miro.svg" alt="Miro" className={styles.toolIcon} />
-              <span>Miro</span>
-            </div>
           </div>
         </div>
 
-        {/* CTAs */}
+        {/* Call to Action */}
         <div className={styles.ctaSection}>
           <a
             href="https://www.figma.com/prototype/..."
@@ -129,18 +128,10 @@ const FitLiftProject = () => {
           >
             <FiFigma /> View Figma Prototype
           </a>
-          <a
-            href="https://github.com/..."
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondaryCta}
-          >
-            <FiGithub /> View Case Study
-          </a>
         </div>
       </div>
     </section>
   );
 };
 
-export default FitLiftProject;
+export default ZeroStyle;

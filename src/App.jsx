@@ -6,7 +6,7 @@ import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
 import FitLift from './components/FitLift/FitLift';
-import Burger from './components/Burger/Burger';
+import Burger from './components/Burger/zeroStyle';
 import './App.css';
 
 function App() {
