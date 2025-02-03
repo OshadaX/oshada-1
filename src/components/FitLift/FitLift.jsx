@@ -8,13 +8,7 @@ import sc4 from '../../assets/screenshot4.png';
 
 const FitLiftProject = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const screenshots = [
-    sc1,
-    sc2,
-    sc3,
-    sc4,
-    // Add more screenshot paths
-  ];
+  const screenshots = [sc1, sc2, sc3, sc4];
 
   const handleNextSlide = () => {
     setActiveSlide((prev) => (prev === screenshots.length - 1 ? 0 : prev + 1));
@@ -40,13 +34,13 @@ const FitLiftProject = () => {
         <button className={styles.sliderArrow} onClick={handlePrevSlide}>
           <FiArrowLeft />
         </button>
-        
+
         <div className={styles.sliderTrack} style={{ transform: `translateX(-${activeSlide * 100}%)` }}>
           {screenshots.map((src, index) => (
             <div key={index} className={styles.slide}>
-              <img 
-                src={src} 
-                alt={`FitLift Screen ${index + 1}`} 
+              <img
+                src={src}
+                alt={`FitLift Screen ${index + 1}`}
                 className={styles.slideImage}
               />
             </div>

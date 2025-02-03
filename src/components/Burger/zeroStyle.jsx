@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import styles from './zeroStyle.module.css'; // Create a new CSS file for this project
+import styles from './zeroStyle.module.css';
 import { FiArrowLeft, FiArrowRight, FiFigma } from 'react-icons/fi';
+import shoeCart from '../../assets/cart1.png';
+import shoeListing from '../../assets/detail.png';
+import shoeDetail from '../../assets/list1.png';
 
 const ZeroStyle = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const screenshots = [
-    'shoe-cart.jpg',
-    'shoe-listing.jpg',
-    'shoe-detail.jpg',
-    // Add more screenshot paths
-  ];
+  const screenshots = [shoeCart, shoeListing, shoeDetail];
 
   const handleNextSlide = () => {
     setActiveSlide((prev) => (prev === screenshots.length - 1 ? 0 : prev + 1));
